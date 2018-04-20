@@ -1,74 +1,143 @@
+﻿
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<style type="text/css"></style>
-	<link rel="stylesheet" href="style.css" type="text/css" />
-	<title>Мое резюме</title>
+
+	<title>OBEDER</title>
+	<link rel="stylesheet" href="css/main.css" type="text/css" />
+	<script src="js/main.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Righteous|Roboto" rel="stylesheet">
+
+<!-- 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+      -->
+
+
 </head>
 <body>
 
+<header >
+	<div id="logoGroup">
+	<div><img src="img/logo.png" class="logo_pic"></div>
+	<div class="logo"> obeder </div>
+	</div>
+	<div id="wrapper">
+		<span id="text">Не ем</span>
+
+		<label id="switch_top">
+	  		<input id="checkbox_switch" type="checkbox" onclick="hide()" checked>
+	  		<span id="slider_top"></span>
+		</label>
+
+		<span class="text">Ем</span>
+		</div>
+
+	<div id="empty"> </div>
+</header>
+
+<div id="main" style='display: flex';>	
+<div id="day">
 
 
-<div id="header">
-	<h1>Костя Погодин</h1>
-	<h3>Frontend-Developer</h3>
-	<p>
-		<a href="mailto:gadzillllla1@gmail.com"> gadzillllla1@gmail.com </a>
-		<a href="http://fun-arts.narod.ru"> сайт fun-arts </a>
 
-	</p>
+	<div id="date"> <h1>Понедельник, сегодня 16 апреля </h1></div>	
+	<section id="food">	
+		<p> Салаты </p>
+ 				<section id="food_position">
+  				<label class="container">
+   				 <input type="checkbox" disable>
+    				<span class="checkmark"> </span>
+ 				 </label> <p > Нежный </p> </section>
+
+
+				<section id="food_position">
+  				<label class="container">
+   				 <input type="checkbox">
+    				<span class="checkmark"> </span>
+ 				 </label> <p > Грубый </p> </section>
+
+	</section>
+	<section id="food">	
+		<p>Мясо</p>
+	    <p><input type="checkbox"> Филе вкусное </p>
+	    <p><input type="checkbox"> Филе посредственное</p>
+	</section>
+	<section id="food">	
+		<p>Супы</p>
+	    <p><input type="checkbox"> Говяжий суп "Ролтон" </p>
+	    <p><input type="checkbox"> Вода с картошкой </p>
+	</section>
+	<section id="food">	
+		<p> Гарниры </p>
+	    <p><input type="checkbox"> Макарохи </p>
+	    <p><input type="checkbox"> Манная каша </p>
+	</section>
+	<section id="food">	
+		<p> Напитки </p>
+	    <p><input type="checkbox"> Чай </p>
+	    <p><input type="checkbox"> Пивас </p>
+	</section>
+	<section id="area_and_button">	
+		<textarea> </textarea>
+		<button id="uncheck_button" onclick="uncheck('main')"> Сбросить в дефолт! </button>
+
+	</section>
+
+	</div>	
+<div id="day">
+	<div id="date"> <h1>Понедельник, сегодня 16 апреля </h1></div>	
+	<section id="food">	
+		<p> Салаты </p>
+	    <p><input type="checkbox"> Нежный </p>
+	    <p><input type="checkbox"> Грубый </p>
+	</section>
+	<section id="food">	
+		<p>Мясо</p>
+	    <p><input type="checkbox"> Филе вкусное </p>
+	    <p><input type="checkbox"> Филе посредственное</p>
+	</section>
+	<section id="food">	
+		<p>Супы</p>
+	    <p><input type="checkbox"> Говяжий суп "Ролтон" </p>
+	    <p><input type="checkbox"> Вода с картошкой </p>
+	</section>
+	<section id="food">	
+		<p> Гарниры </p>
+	    <p><input type="checkbox"> Макарохи </p>
+	    <p><input type="checkbox"> Манная каша </p>
+	</section>
+	<section id="food">	
+		<p> Напитки </p>
+	    <p><input type="checkbox"> Чай </p>
+	    <p><input type="checkbox"> Пивас </p>
+	</section>
+	<section id="area_and_button">	
+		<textarea> </textarea>
+		<button id="uncheck_button" onclick="uncheck('main')"> Сбросить в дефолт! </button>
+
+	</section>
+
+
+
+
+
+
+	</div>	
+
+
 
 
 
 
 </div>
-<div id="main">
-	<p>
-		Всем привет. Я увлекаюсь програмированием, умею собирать кубик-рубик и меня сложно найти и легко потерять. готов ко всему!
-	</p>
-	<section>
-		<h2>Опыт работы</h2>
-		<ul>
-			<li>Армия</li>
-			<li>Банк "Траст"</li>
-			<li>Альфа-Банк</li>
-
-		</ul>
-	</section>
-
-		<section>
-		<h2>Образование</h2>
-		<ul>
-			<li>Школа 51</li>
-			<li>Колледж экономики и информатики</li>
-			<li>Политех</li>
-
-		</ul>
-	</section>
-			<section>
-		<h2>Другие навыки</h2>
-		<ul>
-			<li>Кубик-рубик</li>
-			<li>гитара</li>
-			<li>профессионально ковыряю в носу</li>
-
-		</ul>
-	</section>
-	
 
 
 
-</div>
-<div id="footer">
-	<p> Погодин Константин</p>
-	<p> Ульяновск, ул. Артема д.1 кв.1 +79176219981 <a href="mailto:gadzillllla1@gmail.com"> gadzillllla1@gmail.com </a> </p>
-
-
-
-</div>
 
 
 
 </body>
 </html>
+
+
+
