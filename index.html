@@ -1,143 +1,203 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-<head>
 
+<head>
 	<title>OBEDER</title>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css" type="text/css" />
 	<link rel="stylesheet" href="css/main.css" type="text/css" />
 	<script src="js/main.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Righteous|Roboto" rel="stylesheet">
-
-<!-- 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-      -->
-
-
 </head>
+
 <body>
+	<div class="root">
+		<header class="header">
+			<div class="logoGroup">
+				<img src="img/logo.png" class="logo_pic">
+				<div class="logo">obeder</div>
+			</div>
+			<div class="switch">
+				<span id="text">Не ем</span>
+				<label id="switch_top">
+					<input id="checkbox_switch" type="checkbox" onclick="hide()" checked>
+					<span id="slider_top"></span>
+				</label>
+				<span class="text">Ем</span>
+			</div>
+		</header>
 
-<header >
-	<div id="logoGroup">
-	<div><img src="img/logo.png" class="logo_pic"></div>
-	<div class="logo"> obeder </div>
-	</div>
-	<div id="wrapper">
-		<span id="text">Не ем</span>
+		<div class="main" id="main" style='display: block'>
+			<div class="day">
+				<h1 class="title">Понедельник, сегодня 16 апреля </h1>
+				<div class="eatings">
+					<section class="food">
+						<h2 class="food_title">Салаты</h2>
+						<div class="food_position">
+							<label class="container">Нежный
+								<input type="checkbox" checked>
+								<span class="checkmark" />
+							</label>
+						</div>
+						<div class="food_position">
+							<label class="container">Грубый
+								<input type="checkbox">
+								<span class="checkmark" />
+							</label>
+						</div>
+					</section>
+					<section class="food">
+						<h2 class="food_title">Мясо</h2>
+						<div class="food_position">
+							<label class="container">Филе вкусное
+								<input type="checkbox">
+								<span class="checkmark" />
+							</label>
+						</div>
+						<div class="food_position">
+							<label class="container">Филе посредственное
+								<input type="checkbox">
+								<span class="checkmark" />
+							</label>
+						</div>
+					</section>
+					<section class="food">
+						<h2 class="food_title">Супы</h2>
+						<div class="food_position">
+							<label class="container">Говяжий суп "Ролтон"
+								<input type="checkbox">
+								<span class="checkmark" />
+							</label>
+						</div>
+						<div class="food_position">
+							<label class="container">Вода с картошкой
+								<input type="checkbox">
+								<span class="checkmark" />
+							</label>
+						</div>
+					</section>
+					<section class="food">
+						<h2 class="food_title">Гарниры</h2>
+						<div class="food_position">
+							<label class="container">Макарохи
+								<input type="checkbox">
+								<span class="checkmark" />
+							</label>
+						</div>
+						<div class="food_position">
+							<label class="container">Манная каша
+								<input type="checkbox">
+								<span class="checkmark" />
+							</label>
+						</div>
+					</section>
+					<section class="food_disable">
+						<h2 class="food_title">Напитки</h2>
+						<div class="food_position">
+							<label class="container">Чай
+								<input type="checkbox" disabled>
+								<span class="checkmark" />
+							</label>
+						</div>
+						<div class="food_position">
+							<label class="container">Пивас
+								<input type="checkbox" disabled checked>
+								<span class="checkmark" />
+							</label>
+						</div>
+					</section>
+					<section class="area_and_button">
+						<textarea class="comment"></textarea>
+						<button class="uncheck_button" onclick="uncheck('main')">Сбросить в дефолт!</button>
+					</section>
+				</div>
+			</div>
 
-		<label id="switch_top">
-	  		<input id="checkbox_switch" type="checkbox" onclick="hide()" checked>
-	  		<span id="slider_top"></span>
-		</label>
-
-		<span class="text">Ем</span>
+			<div class="day">
+				<h1 class="title">Вторник, завтра 17 апреля </h1>
+				<div class="eatings">
+					<section class="food">
+						<h2 class="food_title">Салаты</h2>
+						<div class="food_position">
+							<label class="container">Нежный
+								<input type="checkbox" disable>
+								<span class="checkmark" />
+							</label>
+						</div>
+						<div class="food_position">
+							<label class="container">Грубый
+								<input type="checkbox">
+								<span class="checkmark" />
+							</label>
+						</div>
+					</section>
+					<section class="food">
+						<h2 class="food_title">Мясо</h2>
+						<div class="food_position">
+							<label class="container">Филе вкусное
+								<input type="checkbox">
+								<span class="checkmark" />
+							</label>
+						</div>
+						<div class="food_position">
+							<label class="container">Филе посредственное
+								<input type="checkbox">
+								<span class="checkmark" />
+							</label>
+						</div>
+					</section>
+					<section class="food">
+						<h2 class="food_title">Супы</h2>
+						<div class="food_position">
+							<label class="container">Говяжий суп "Ролтон"
+								<input type="checkbox">
+								<span class="checkmark" />
+							</label>
+						</div>
+						<div class="food_position">
+							<label class="container">Вода с картошкой
+								<input type="checkbox">
+								<span class="checkmark" />
+							</label>
+						</div>
+					</section>
+					<section class="food_disable">
+						<h2 class="food_title">Гарниры</h2>
+						<div class="food_position">
+							<label class="container">Макарохи
+								<input type="checkbox" disabled checked>
+								<span class="checkmark" />
+							</label>
+						</div>
+						<div class="food_position">
+							<label class="container">Манная каша
+								<input type="checkbox" disabled>
+								<span class="checkmark" />
+							</label>
+						</div>
+					</section>
+					<section class="food">
+						<h2 class="food_title">Напитки</h2>
+						<div class="food_position">
+							<label class="container">Чай
+								<input type="checkbox">
+								<span class="checkmark" />
+							</label>
+						</div>
+						<div class="food_position">
+							<label class="container">Пивас
+								<input type="checkbox">
+								<span class="checkmark" />
+							</label>
+						</div>
+					</section>
+					<section class="area_and_button">
+						<textarea class="comment"></textarea>
+						<button class="uncheck_button" onclick="uncheck('main')">Сбросить в дефолт!</button>
+					</section>
+				</div>
+			</div>
 		</div>
-
-	<div id="empty"> </div>
-</header>
-
-<div id="main" style='display: flex';>	
-<div id="day">
-
-
-
-	<div id="date"> <h1>Понедельник, сегодня 16 апреля </h1></div>	
-	<section id="food">	
-		<p> Салаты </p>
- 				<section id="food_position">
-  				<label class="container">
-   				 <input type="checkbox" disable>
-    				<span class="checkmark"> </span>
- 				 </label> <p > Нежный </p> </section>
-
-
-				<section id="food_position">
-  				<label class="container">
-   				 <input type="checkbox">
-    				<span class="checkmark"> </span>
- 				 </label> <p > Грубый </p> </section>
-
-	</section>
-	<section id="food">	
-		<p>Мясо</p>
-	    <p><input type="checkbox"> Филе вкусное </p>
-	    <p><input type="checkbox"> Филе посредственное</p>
-	</section>
-	<section id="food">	
-		<p>Супы</p>
-	    <p><input type="checkbox"> Говяжий суп "Ролтон" </p>
-	    <p><input type="checkbox"> Вода с картошкой </p>
-	</section>
-	<section id="food">	
-		<p> Гарниры </p>
-	    <p><input type="checkbox"> Макарохи </p>
-	    <p><input type="checkbox"> Манная каша </p>
-	</section>
-	<section id="food">	
-		<p> Напитки </p>
-	    <p><input type="checkbox"> Чай </p>
-	    <p><input type="checkbox"> Пивас </p>
-	</section>
-	<section id="area_and_button">	
-		<textarea> </textarea>
-		<button id="uncheck_button" onclick="uncheck('main')"> Сбросить в дефолт! </button>
-
-	</section>
-
-	</div>	
-<div id="day">
-	<div id="date"> <h1>Понедельник, сегодня 16 апреля </h1></div>	
-	<section id="food">	
-		<p> Салаты </p>
-	    <p><input type="checkbox"> Нежный </p>
-	    <p><input type="checkbox"> Грубый </p>
-	</section>
-	<section id="food">	
-		<p>Мясо</p>
-	    <p><input type="checkbox"> Филе вкусное </p>
-	    <p><input type="checkbox"> Филе посредственное</p>
-	</section>
-	<section id="food">	
-		<p>Супы</p>
-	    <p><input type="checkbox"> Говяжий суп "Ролтон" </p>
-	    <p><input type="checkbox"> Вода с картошкой </p>
-	</section>
-	<section id="food">	
-		<p> Гарниры </p>
-	    <p><input type="checkbox"> Макарохи </p>
-	    <p><input type="checkbox"> Манная каша </p>
-	</section>
-	<section id="food">	
-		<p> Напитки </p>
-	    <p><input type="checkbox"> Чай </p>
-	    <p><input type="checkbox"> Пивас </p>
-	</section>
-	<section id="area_and_button">	
-		<textarea> </textarea>
-		<button id="uncheck_button" onclick="uncheck('main')"> Сбросить в дефолт! </button>
-
-	</section>
-
-
-
-
-
-
-	</div>	
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
+	</div>
 </body>
+
 </html>
-
-
-

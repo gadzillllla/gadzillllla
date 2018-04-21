@@ -1,224 +1,178 @@
-﻿* {margin: 0;
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.root { 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+ 
     font-family: Roboto, sans-serif;
-	} 
-
-body{ 
-display: flex; 
-flex-direction: column;
-align-items: center; 
-overflow: scroll;
-
-
 } 
 
-h1{
-	font-size: 32px;
-}
-
-
-
-header {
-        display: flex; 
-        height: 50px; 
-        position: fixed; 
-        z-index:1; 
-   		width: 100%; 
-    	max-width: 1024px;
-    	box-shadow: 0px 2px 5px;
-    	background-color: white;
-    	justify-content: space-between;
+.title {
+    display: flex;
+    margin: 0 5px 20px;
+    font-size: 18px;
 
 }
-#main{
 
-	z-index:0;
-	margin-top: 50px;
-	display: flex; 
-	flex-direction: column;
-    align-self: center; 
+.header {
+    display: flex; 
+    height: 50px; 
+    position: fixed; 
     width: 100%; 
+    box-shadow: 0px 0px 7px;
+    justify-content: center;
+    background-color: white;
+    z-index: 1;
+}
+
+.main {
     max-width: 1024px;
-    box-shadow: 0px 2px 5px;
+    margin: 50px 20px;
 }
 
-
-#logoGroup{
-	display: flex;
+.logoGroup {
+    display: none;
+    position: absolute;
+    left: 0;
 }
 
-.logo{	
-	width: 70px;
-	color: #000000;
+.logo {	
 	font-family: Righteous;
 	font-size: 24px;
-	font-weight: 400;
-	text-align: center;
 	align-self: center;
 }
 
-.logo_pic{
+.logo_pic {
 	height: 50px;
 }
 
-#empty{
-	width: 120px
+.day {
+    margin-top: 20px;
 }
 
-.top{
-	display: inline;
-	width: 90%;
-	align-self: center;
-	display: flex;
-
-
-}
-
-#switch{
-	margin: auto;
-}
-
-#day{
-	display: flex;
-	flex-wrap: wrap;
-	padding-left: 10%;
-	padding-right: 10%;
+.eatings {
+    display: flex;
+    flex-direction: column;
 	margin-top:4%;
-	
-}
-#date{
-	width: 100%
-
-}
-#food{
-	margin: 5% 1% 3% 1%;
-	width: 48%;
-	box-shadow: 0px 2px 5px;
-	padding-left: 20px;
-}
-#food_position{
-	display: flex;
-	width: 30px;
-	height: 27px;
-}
-
-
-
-#food p:first-child {
-	font-weight: bold;
-	margin-bottom: 15px;
 
 }
 
+.food, .food_disable {
+    margin: 0px 11px 22px;
+    box-shadow: 1px 1px 3px;
+    padding: 7px 0px;
+    background-color: #ececec;
+}
 
 
-textarea{
+.food_disable{
+    color: #d6d6d6;
+}
+
+.food_position {
+    display: flex;
+    margin-top: 12px;
+    margin-bottom: 14px;
+    padding-left: 25px;
+}
+
+.food_title {
+    font-size: 18px;
+	margin-bottom: 12px;
+    margin-top: 10px;
+    padding-left: 25px;
+}
+
+.comment {
 	resize: none;
-	width: 99%;
 	height: 60%;
-	margin-bottom: 5%
-
+    width: 100%;
 }
 
-#area_and_button{
+.area_and_button {
 	display: flex;
 	flex-direction: column;
-	margin: 1% 1% 1% 1%;
-	width: 48%;
+   
+    padding: 0 20px;
 }
 
-
-#uncheck_button{
-  width: 290px;
-  height: 40px;
-  color: #000000;
-  font-family: Roboto;
-  font-size: 20px;
-  font-style: normal;
-  font-stretch: normal;
-  font-weight: 500;
-  text-align: left;
+.uncheck_button {
+    height: 40px;
+    color: white;
+    background-color: rgba(54, 181, 199, 1);
+    border: none;
+    font-size: 14px;
+    max-width: 100%;
+    margin-top: 10px;
 }
 
-/*----------ПЕРЕКЛЮЧАТЕЛЬ - ЕМ, не ЕМ-----------*/
-#wrapper {
-  display: flex;
-  align-items: center;
+.switch {
+    display: flex;
+    align-items: center;
 }
 #switch_top {
-  position: relative;
-  display: block;
-  width: 60px;
-  height: 3px;
-  margin: 0 10px;
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 0 10px;
 }
 
-#switch_top input {display:none;}
+#switch_top input {
+    display:none;
+}
 
 #slider_top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: .4s;
-  border-radius: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 1px;
 }
 
 #slider_top:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: -12px;
-  background-color: rgba(54, 181, 199, 1);
-  transition: .4s;
-  border-radius: 50%;
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: -12px;
+    background-color: rgba(54, 181, 199, 1);
+    transition: .4s;
+    border-radius: 50%;
 }
 
 #checkbox_switch:checked + #slider_top {
-  background-color: rgba(187, 187, 187, 1);;
+    background-color: rgba(187, 187, 187, 1);;
 }
 
 #checkbox_switch:checked + #slider_top:before {
-  -webkit-transform: translateX(26px);
-
-s
+    -webkit-transform: translateX(26px);
 }
-
-
-@media screen and (max-width: 500px) {#food {width: 90%;} } 
-@media screen and (max-width: 500px) {.logo, .logo_pic, #empty {display: None} } 
-@media screen and (max-width: 500px) {main {
-	padding-left: 2%; 
-	padding-right: 0;
-	} 
-}
-
 
 .container {
     display: block;
     position: relative;
     padding-left: 35px;
-    margin-bottom: 0px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 16px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-	height: 20px;
-    width: 20px;
-
 }
 
 .container input {
     position: absolute;
     display: none;
     cursor: pointer;
-
-
 }
 
 .checkmark {
@@ -235,6 +189,21 @@ s
 .container input:checked + .checkmark {
     background-color: #26a69a;
     border: 2px solid #26a69a;
+
+}
+.container input[disabled='disabled']{
+    background-color: red;
+    border: 2px solid red;
+}
+
+.container input:disabled + .checkmark {
+     background-color: transparent;
+    border: 2px solid #d6d6d6;
+}
+
+.container input:disabled:checked + .checkmark {
+    background-color: #7eafab;
+    border: 2px solid #7eafab;
 }
 
 .checkmark:after {
@@ -258,12 +227,48 @@ s
     -ms-transform: rotate(40deg);
     transform: rotate(40deg);
 }
-.checkmark p {
-margin-left: 30px;
-padding-top: 50px;
 
-;
 
+@media screen and (min-width: 410px) {
+    .logoGroup {
+        display: flex;
+    }
 }
 
+@media screen and (min-width: 500px) {
+    .main {
+        margin: 50px 10%;
+    }
 
+    .eatings {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .food, .food_disable, .area_and_button {
+        flex: 1 1 35%;
+    }
+
+    .area_and_button {
+         margin: 0;
+    }
+
+    .comment {
+        margin: 0;
+    }
+
+    .uncheck_button {
+        font-size: 18px;
+    }
+    .day {
+        margin-bottom: 150px;
+    }
+    .title{
+        font-size: 32px
+
+    }
+    .uncheck_button {
+    max-width: 200px;
+
+}
+} 
