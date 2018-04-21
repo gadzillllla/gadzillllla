@@ -13,9 +13,8 @@
 
 .title {
     display: flex;
-    margin: 0 5px 20px;
+    margin: 0 15px 20px;
     font-size: 16px;
-    margin: 0 5px 20px;
 }
 
 
@@ -40,6 +39,7 @@
     display: none;
     position: absolute;
     left: 0;
+    cursor: pointer;
 }
 
 .logo {	
@@ -60,15 +60,15 @@
     display: flex;
     flex-direction: column;
 	margin-top:4%;
-
 }
 
 .food, .food_disable {
-    margin: 0px 11px 22px;
-    box-shadow: 1px 1px 3px;
-    padding: 7px 0px;
-    background-color: #ececec;
-    width: 280px;
+    margin: 0px 9px 22px 16px;
+    box-shadow: 1px 1px 3px grey;
+    padding: 6px 5px;
+    background-color: #efefef;
+    width: 270px;
+    border-radius: 5px;
 }
 
 
@@ -93,14 +93,14 @@
 .comment {
 	resize: none;
 	height: 60%;
-    width: 100%;
+    width: 103%;
 }
 
 .area_and_button {
 	display: flex;
 	flex-direction: column;
-   
-    padding: 0 20px;
+    padding: 0 18px;
+
 }
 
 .uncheck_button {
@@ -109,13 +109,17 @@
     background-color: rgba(54, 181, 199, 1);
     border: none;
     font-size: 14px;
-    max-width: 100%;
     margin-top: 10px;
+    width: 103%;
+    cursor: pointer;
+    border-radius: 5px
+
 }
 
 .switch {
     display: flex;
     align-items: center;
+
 }
 #switch_top {
     position: relative;
@@ -145,11 +149,13 @@
     content: "";
     height: 26px;
     width: 26px;
-    left: 4px;
-    bottom: -12px;
-    background-color: rgba(54, 181, 199, 1);
+    left: 1px;
+    bottom: -14px;
+    background-color: white;
+    border: 3px solid #807e7f;
     transition: .4s;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 #checkbox_switch:checked + #slider_top {
@@ -166,10 +172,8 @@
     padding-left: 35px;
     cursor: pointer;
     font-size: 16px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
+
 }
 
 .container input {
@@ -259,21 +263,29 @@
 
     .comment {
         margin: 0;
+        width: 102%;
+
     }
 
     .uncheck_button {
         font-size: 18px;
     }
     .day {
-        margin-bottom: 150px;
+        margin-bottom: 100px;
     }
     .title{
         font-size: 32px;
         width: 500px;
+        margin-left: 15px;
 
     }
     .uncheck_button {
-    max-width: 200px;
+    max-width: 353px;
+    margin-top: 10px;
 
-}
+    }
+    #slider_top:before {
+        background-color: #36b5c7;
+        border: 3px solid transparent;
+    }
 } 
