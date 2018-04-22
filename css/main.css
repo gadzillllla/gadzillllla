@@ -301,7 +301,7 @@
     font-size: 18px;
 
     }
-    #slider_top:before {
+   .slider_top:before {
         background-color: #36b5c7;
         border: 3px solid transparent;
     }
