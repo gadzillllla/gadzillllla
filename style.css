@@ -1,0 +1,208 @@
+body, html { 
+    margin: 0 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: black;
+}
+
+.sky{
+    width: 100%;
+    height: 70%;
+    background: -webkit-linear-gradient(top, #1cdaef 0%,#a0d8ef 100%)
+}
+.ground{
+    width: 100%;
+    height: 30%;
+    background-color: #4c7329;
+    border-top: 57px solid black;
+}
+
+.train{
+    position: absolute;
+    left: 25%;
+    top: 56.2%;
+    width: 708px;
+    height: 148px;
+    background: url(train_sprite.png) no-repeat 0 0;
+    background-size: cover;
+    z-index: 3;
+
+    -webkit-animation-name: sprite;
+    -webkit-animation-duration: 0.5s; 
+    -webkit-animation-iteration-count: infinite; 
+    -webkit-animation-timing-function: linear; 
+}
+
+@-webkit-keyframes sprite
+{
+    0% {background-position: 0px -1px;}
+    14.999% {background-position: 0px -1px;}
+    
+    15% {background-position: 0px -148px;}
+    29.999% {background-position: 0px -148px;}
+
+    30% {background-position: 0px -296px;}
+    44.999% {background-position: 0px -296px;}
+
+    45% {background-position: 0px -444px;}
+    59.999% {background-position: 0px -444px;}
+    
+    60% {background-position: 0px -740px;}
+    74.999% {background-position: 0px -740px;}
+    
+    75% {background-position: 0px -888px;}
+    89.999% {background-position: 0px -888px;}
+
+    90% {background-position: 0px -1036px;}
+    100% {background-position: 0px -1036px;}
+}
+
+.cloud1, .cloud2 {
+    position: absolute;
+    background: url(cloud1.png) no-repeat 0 0;
+    background-size: cover;
+    z-index: 2;
+
+    -webkit-animation-name: cloud;
+    -webkit-animation-iteration-count: infinite; 
+    -webkit-animation-timing-function: linear;
+}
+
+.cloud1{
+    left: -19%;
+    top: 13.2%;
+    width: 353px;
+    height: 189px;
+    -webkit-animation-duration: 15s; 
+}
+
+.cloud2{
+    left: -60%;
+    top: 20.2%;
+    width: 300px;
+    height: 164px;
+    -webkit-animation-duration: 26s; 
+}
+
+
+
+.bush1, .bush2, .mounts {
+    position: absolute;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    -webkit-animation-name: mounts_and_bush;
+    -webkit-animation-iteration-count: infinite; 
+    -webkit-animation-timing-function: linear;
+}
+
+.mounts {
+    left: 0%;
+    top: 13.2%;
+    width: 100%;
+    height: 527px;
+    background: url(mounts.png);
+    background-size: contain;
+    -webkit-animation-duration: 90s; 
+    z-index: 1;
+}
+
+.bush1{
+    left: 0%;
+    top: 74.2%;
+    width: 100%;
+    height: 40px; 
+    background: url(grass_row1.png);
+    background-size: contain;
+    -webkit-animation-duration: 5s; 
+}
+
+ .bush2 {
+    left: 0%;
+    top: 85.2%;
+    width: 100%;
+    height: 75px; 
+    background: url(grass_row2.png);
+    background-size: contain;
+    -webkit-animation-duration: 2s; 
+
+}
+
+.sun {
+    position: absolute;
+    left: 28%;
+    top: 17%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ffff77;
+    z-index: 1;
+}
+
+.smoke{
+    position: absolute;
+    left: 29%;
+    top: 60%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #505050;
+    opacity: 1;
+    z-index: 2;
+    -webkit-animation-name: smoke;
+    -webkit-animation-iteration-count: infinite; 
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: 1s; 
+    
+}
+
+.gose{
+    position: absolute;
+    left: -20%;
+    top: 67.2%;
+    width: 300px;
+    height: 300px;
+    background: url(gose.png) no-repeat 0 0;
+    background-size: contain;
+    z-index: 100;
+    -webkit-animation-name: gose;
+    -webkit-animation-iteration-count: infinite; 
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 15s;
+    -webkit-animation-duration: 10s; 
+}
+
+@-webkit-keyframes mounts_and_bush
+{
+    0% {background-position: 0px 0%}
+    100% {background-position: 2000px 0%}
+
+}
+
+@-webkit-keyframes cloud
+{
+    0% {}
+    100% {left: 119%}
+}
+
+@-webkit-keyframes smoke
+{
+    0% {}
+    100% {top: 50%;
+        width: 45px;
+        height: 50px;
+        opacity: 0;
+    };
+}
+
+@-webkit-keyframes gose
+{
+    0% {}
+    100% {left: 1000%;
+    animation-delay: 2s}
+}
